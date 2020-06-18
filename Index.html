@@ -1,10 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            padding-bottom: 10px;
+        }
+
+        input, textarea, select {
+            display: block;
+            width: 100%;
+        }
+
+         
+        form {
+            background-color: #87ceeb;
+            padding: 40px 40px 40px 40px;
+        }
+
+        #button-area {
+            float: left;
+            width: 50%;
+            height: 50%;
+            
+        }
+
+        input[type=checkbox]:not(old) + label,
+        input[type=radio   ]:not(old) + label {
+          display      : inline-block;
+          margin-left  : -28px;
+          padding-left : 28px;
+        }
+  
+
+        
+
+    </style>
 </head>
+
 <body>
-    
+    <h1 id="title">Tell me about your favorite vacation spot</h1>
+    <p id="description">This is survey to tell us about your favorite vacation spot</p>
+
+    <form id="survey-form">
+        <label id="name-label">
+            Name: <input type="text" id="name" name="name" required placeholder="name">
+        </label>
+
+        <br>
+        <label id="email-label">
+            Email: <input type="email" id="email" name="name" required placeholder="email">
+        </label>
+
+        <br>
+        <label id="number-label">
+            Numbers: <input type="number" id="number" min="1" max="5" required placeholder="number">
+        </label>
+
+        <br>
+        <label id="cities-type-label">Cities Type</label>
+
+        <select id="dropdown" name="cites">
+            <option value="volvo">San Francisco</option>
+            <option value="saab">Washington DC</option>
+            <option value="fiat">London</option>
+            <option value="audi">Tokyo</option>
+        </select><br>
+        
+        <label id="addtional comments-label" >Additonal Comment</label>
+        <textarea placeholder="addtional comment"></textarea><br>
+
+        <div id="button-area">
+            <label id="Gender-type-label">Gender Type</label>
+
+            <input type="radio" class="radio-inline" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" class="radio-inline" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" class="radio-inline" id="other" name="gender" value="other">
+            <label for="other">Other</label><br>
+        </div>
+
+        
+        <div id="button-area">
+            <label for="travel vehicles">Mode of transportation</label>
+            <input type="checkbox" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" name="vehicle3" value="Boat" checked>
+            <label for="vehicle3"> I have a boat</label><br>
+        </div>
+       <br>
+
+        <br>
+        <input type="submit">
+
+    </form>
+    <script src=https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js></script>
+
+
 </body>
+
 </html>
